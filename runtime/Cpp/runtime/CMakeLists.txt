@@ -22,7 +22,9 @@ file(GLOB libantlrcpp_SRC
 )
 
 add_library(antlr4_static STATIC ${libantlrcpp_SRC})
-
+set_property(TARGET antlr4_static PROPERTY CXX_STANDARD 11)
+set_property(TARGET antlr4_static PROPERTY CXX_EXTENSIONS ON)
+set_property(TARGET antlr4_static PROPERTY CXX_STANDARD_REQUIRED OFF)
 set(LIB_OUTPUT_DIR "${CMAKE_HOME_DIRECTORY}/dist") # put generated libraries here.
 message(STATUS "Output libraries to ${LIB_OUTPUT_DIR}")
 
