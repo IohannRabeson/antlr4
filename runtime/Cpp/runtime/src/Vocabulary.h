@@ -182,9 +182,9 @@ namespace dfa {
     virtual std::string getDisplayName(size_t tokenType) const;
 
   private:
-    std::vector<std::string> const _literalNames;
-    std::vector<std::string> const _symbolicNames;
-    std::vector<std::string> const _displayNames;
+    std::vector<std::string> const _literalNames = {};
+    std::vector<std::string> const _symbolicNames = {};
+    std::vector<std::string> const _displayNames = {};
     const size_t _maxTokenType = 0;
   };
 
